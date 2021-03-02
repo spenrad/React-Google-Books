@@ -2,12 +2,12 @@ import React from "react";
 import Books from "../Books/index"
 import "./style.css";
 
-function Main () {
+function Main ({ booky }) {
 
     return (
         <div className="main">
         <h3>Results</h3>
-        <Books />
+        <Books booky={booky}/>
         </div>
     );
 }

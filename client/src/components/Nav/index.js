@@ -11,18 +11,18 @@ function Nav() {
         <button
           className="navbar-toggler"
           type="button"
-          dataBsToggle="collapse"
-          dataBsTarget="#navbarNav"
-          ariaControls="navbarNav"
-          ariaExpanded="false"
-          ariaLabel="Toggle navigation"
+          data-bs-toggle="collapse"
+          data-bs-yarget="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" ariaCurrent="page" href="/search">
+              <a className="nav-link active" aria-current="page" href="/search">
                 Search
               </a>
             </li>
