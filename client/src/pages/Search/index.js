@@ -6,7 +6,11 @@ import API from "../../utils/API";
 function Search (props) {
 
     const [books, setBooks] = useState({
-        bookList: []
+        bookList: [],
+    })
+
+    const [saveBooks, setSaveBooks] = useState({
+        savedBooks: [],
     })
 
     useEffect(function() {
@@ -19,12 +23,22 @@ function Search (props) {
         });
     }, []);
 
+    const handleSave = function handleSave(bookData) {
+        API.saveBook(bookData);
+            console.log("bookData ======>", bookData)
+            console.log("button clicked");
+            setSaveBooks({
+                ...saveBooks,
+                savedBooks: bookData
+            });
+    }
+
 
 
     return (
         <div>
         <Searchy />
-        <Main booky={books.bookList}/>
+        <Main booky={books.bookList} handleSave={handleSave}/>
         </div>
     );
 }
