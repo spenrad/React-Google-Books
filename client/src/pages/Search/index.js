@@ -33,8 +33,6 @@ function Search (props) {
             });
     }
 
-
-
     return (
         <div>
         <Searchy />
