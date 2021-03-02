@@ -15,7 +15,7 @@ function Books(props) {
               <a href={boox.saleInfo.buyLink}> <button className="btn btn-info">View</button></a>
               <button className="btn btn-succes"  onClick={() =>props.handleSave({
                   title: boox.volumeInfo.title,
-                  authors: boox.volumeInfo.authors[0],
+                  authors: boox.volumeInfo.authors.join(", "),
                   description: boox.volumeInfo.description,
                   image: boox.volumeInfo.imageLinks.thumbnail,
                   link: boox.saleInfo.buyLink
@@ -24,7 +24,7 @@ function Books(props) {
           </div>
           <div className="row">
             <div className="col-md-3">
-              <img src={boox.volumeInfo.imageLinks.thumbnail} alt={boox.title} />
+              <img src={boox.volumeInfo.imageLinks ? boox.volumeInfo.imageLinks.thumbnail : "https://i.imgur.com/lrPn7VM.jpeg"} alt={boox.title} />
             </div>
             <div className="col-md-9">
               <p>{boox.volumeInfo.description}</p>

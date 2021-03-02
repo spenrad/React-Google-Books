@@ -13,15 +13,15 @@ function Search (props) {
         savedBooks: [],
     })
 
-    useEffect(function() {
-        API.googleSearch().then(function (results) {
-            console.log("results ========>", results.data.items)
-            setBooks({
-                ...books,
-                bookList: results.data.items,
-            });
-        });
-    }, []);
+//  useEffect(function(search) {
+//         API.googleSearch(search).then(function (results) {
+//             console.log("results ========>", results.data.items)
+//             setBooks({
+//                 ...books,
+//                 bookList: results.data.items,
+//             });
+//         });
+//     }, []);
 
     const handleSave = function handleSave(bookData) {
         API.saveBook(bookData);
@@ -33,10 +33,23 @@ function Search (props) {
             });
     }
 
+    const handleSubmit = function  handleSubmit(event) {
+        event.preventDefault();
+        const search = event.target.value;
+        API.googleSearch(search).then(function (results) {
+            console.log("results ========>", results.data.items)
+            setBooks({
+                ...books,
+                bookList: results.data.items,
+            });
+        });
+    
+    }
+
     return (
         <div>
-        <Searchy />
-        <Main booky={books.bookList} handleSave={handleSave}/>
+        <Searchy handleSubmit={handleSubmit}/>
+        {books.bookList.length > 0 ? (<Main booky={books.bookList} handleSave={handleSave}/>) : ("")}
         </div>
     );
 }

@@ -1,13 +1,13 @@
 import React from "react";
 
-function Searchy () {
+function Searchy (props) {
     return (
         <div className="search">
             <h3>Search for a Book</h3>
-            <form>
-                <input placeholder="Search">
+            <div id="searchForm"><form >
+                <input onChange={props.handleSubmit} placeholder="Search">
                 </input>
-            </form>
+            </form></div>
         </div>
     );
 }
