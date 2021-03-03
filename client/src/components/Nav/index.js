@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.css";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 function Nav() {
   return (
     <nav className="navbar navbar-expand navbar-light">
       <div className="container-fluid">
-        <Link className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           Google Books
         </Link>
         <div className="collapse navbar-collapse" id="navbarNav">
