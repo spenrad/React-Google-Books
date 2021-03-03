@@ -49,6 +49,7 @@ function Search (props) {
     return (
         <div>
         <Searchy handleSubmit={handleSubmit}/>
+        <br />
         {books.bookList.length > 0 ? (<Main booky={books.bookList} handleSave={handleSave}/>) : ("")}
         </div>
     );
