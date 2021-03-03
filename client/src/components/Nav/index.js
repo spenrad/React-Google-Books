@@ -1,24 +1,25 @@
 import React from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
     <nav className="navbar navbar-expand navbar-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" href="/">
           Google Books
-        </a>
+        </Link>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/search">
+              <Link className="nav-link active" aria-current="page" to="/search">
                 Search
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="/saved">
+              <Link className="nav-link active" to="/saved">
                 Saved
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
