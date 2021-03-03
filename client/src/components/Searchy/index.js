@@ -6,9 +6,11 @@ function Searchy (props) {
         <div className="search container text-center">
             <h3>Search for a Book</h3>
             <div id="searchForm"><form >
-                <input onChange={props.handleSubmit} placeholder="Search">
+                <input onChange={props.handleTyping} placeholder="Search">
                 </input>
-            </form></div>
+            </form>
+            <button onClick={props.handleSubmit}>Search!</button>
+            </div>
             <br />
         </div>
     );

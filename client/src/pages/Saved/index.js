@@ -16,7 +16,7 @@ function Saved() {
           res.data
       )
     })
-  });
+  },[]);
 
   return (
     <div className="container">

@@ -13,6 +13,10 @@ function Search (props) {
         savedBooks: [],
     })
 
+    const [tpying, setTyping] = useState({
+        searchTerm: "",
+    })
+
 //  useEffect(function(search) {
 //         API.googleSearch(search).then(function (results) {
 //             console.log("results ========>", results.data.items)
@@ -33,10 +37,17 @@ function Search (props) {
             });
     }
 
-    const handleSubmit = function  handleSubmit(event) {
+    const handleTyping = function handleTyping(event) {
         event.preventDefault();
-        const search = event.target.value;
-        API.googleSearch(search).then(function (results) {
+        setTyping({
+            ...tpying,
+            searchTerm: event.target.value
+        })
+
+    }
+    
+    const handleSubmit = function  handleSubmit() {
+        API.googleSearch(tpying.searchTerm).then(function (results) {
             console.log("results ========>", results.data.items)
             setBooks({
                 ...books,
@@ -48,7 +59,7 @@ function Search (props) {
 
     return (
         <div>
-        <Searchy handleSubmit={handleSubmit}/>
+        <Searchy handleSubmit={handleSubmit} handleTyping={handleTyping}/>
         <br />
         {books.bookList.length > 0 ? (<Main booky={books.bookList} handleSave={handleSave}/>) : ("")}
         </div>
