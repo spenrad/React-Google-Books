@@ -14,7 +14,7 @@
 
 ## Description
 
-This Googel Books Search App to allow Users to search and save books. When a user search a book in the search bar and the books are generated, including a image of the cover page, title,author, adescription of the book. If the user clicks the save button then the book will be saved to their profile. The user also can see a list of their saved books.
+This Google Books Search App to allow Users to search and save books. When a user search a book in the search bar and the books are generated, including an image of the cover page, title author, a description of the book. If the user clicks the save button then the book will be saved to their profile. The user also can see a list of their saved books.
 
 ## Video
 
