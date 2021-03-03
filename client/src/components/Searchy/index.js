@@ -9,7 +9,7 @@ function Searchy (props) {
                 <input onChange={props.handleTyping} placeholder="Search">
                 </input>
             </form>
-            <button onClick={props.handleSubmit}>Search!</button>
+            <button className="btn" id="searchBtn" onClick={props.handleSubmit}>Search!</button>
             </div>
             <br />
         </div>

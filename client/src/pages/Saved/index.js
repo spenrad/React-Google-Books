@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
+import "./style.css"
 
 
 
@@ -35,13 +36,13 @@ function Saved() {
                 return (
                     <div className="bookResult" key={books._id}>
                       <div className="row">
-                        <div className="col-md-10">
+                        <div className="col-md-9">
                           <p>{books.title}</p>
                           <p>{books.authors}</p>
                         </div>
-                        <div className="col-md-2">
-                          <a href={books.link}> <button className="btn btn-info" href={books.link} target="_blank">View</button></a>
-                          <button className="btn btn-succes" onClick={() => deletion(books._id)}>Delete</button>
+                        <div className="col-md-3">
+                          <a href={books.link}> <button className="btn viewBtn" href={books.link} target="_blank">View</button></a>
+                          <button className="btn deleteBtn" onClick={() => deletion(books._id)}>Delete</button>
                         </div>
                       </div>
                       <div className="row">
