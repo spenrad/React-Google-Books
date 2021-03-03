@@ -8,9 +8,14 @@ function Books(props) {
         <div className="bookResult" key={boox.id}>
           <div className="row">
             <div className="col-md-10">
-              <p>{boox.volumeInfo.title}</p>
-              <p>{boox.volumeInfo.authors}</p>
+              <p>
+                {boox.volumeInfo.title} <br />
+                {boox.volumeInfo.authors}
+              </p>
             </div>
+
+            <br />
+
             <div className="col-md-2">
               <a href={boox.saleInfo.buyLink}> <button className="btn btn-info">View</button></a>
               <button className="btn btn-succes"  onClick={() =>props.handleSave({
@@ -30,6 +35,7 @@ function Books(props) {
               <p>{boox.volumeInfo.description}</p>
             </div>
           </div>
+          <br /><br />
         </div>
       );
     })

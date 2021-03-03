@@ -5,9 +5,9 @@ function Header () {
 
     
 return (
-    <div>
-        <h1>Google Books (React)</h1>
-        <h2>Search for and SAVE Books!</h2>
+    <div className="jumbotron text-center">
+        <h1 className="display-4">Google Books (React)</h1>
+        <p className="lead">Search for and SAVE Books!</p>
     </div>
     );
 }
