@@ -6,24 +6,34 @@ import API from "../../utils/API";
 function Saved() {
 
   const [library, setLibrary] = useState(
-      []
+      [],
   )
 
-  useEffect(function () {
+  const retrieve = function () {
     API.getBooks().then(function(res) {
-      console.log("look at this SHIT", res.data)
-        setLibrary(
-          res.data
-      )
-    })
+      setLibrary(
+        res.data
+    )
+  })
+  }
+
+  useEffect(function () {
+    retrieve()
   },[]);
+
+  const deletion = function deletion (id) {
+    API.deleteBook(id).then(function (res){
+      retrieve();
+    })
+  }
+
 
   return (
     <div className="container">
         <div>
             {library.map(function(books) {
                 return (
-                    <div className="bookResult" key={books.id}>
+                    <div className="bookResult" key={books._id}>
                       <div className="row">
                         <div className="col-md-10">
                           <p>{books.title}</p>
@@ -31,7 +41,7 @@ function Saved() {
                         </div>
                         <div className="col-md-2">
                           <a href={books.link}> <button className="btn btn-info" href={books.link} target="_blank">View</button></a>
-                          <button className="btn btn-succes">Delete</button>
+                          <button className="btn btn-succes" onClick={() => deletion(books._id)}>Delete</button>
                         </div>
                       </div>
                       <div className="row">
