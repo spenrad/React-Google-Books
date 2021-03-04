@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
