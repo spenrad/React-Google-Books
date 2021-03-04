@@ -37,8 +37,8 @@ function Saved() {
                     <div className="bookResult" key={books._id}>
                       <div className="row">
                         <div className="col-md-9">
-                          <p>{books.title}</p>
-                          <p>{books.authors}</p>
+                          <p className="title">{books.title}</p>
+                          <p className="author">{books.authors}</p>
                         </div>
                         <div className="col-md-3">
                           <a href={books.link}> <button className="btn viewBtn" href={books.link} target="_blank">View</button></a>
@@ -47,10 +47,10 @@ function Saved() {
                       </div>
                       <div className="row">
                         <div className="col-md-3">
-                          <img src={books.image} alt={books.title} />
+                          <img src={books.image ? books.image : "https://i.imgur.com/lrPn7VM.jpeg"} alt={books.title} />
                         </div>
                         <div className="col-md-9">
-                          <p>{books.description}</p>
+                          <p className="plot">{books.description}</p>
                         </div>
                       </div>
                     </div>
