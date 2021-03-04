@@ -1,4 +1,7 @@
-# React-Google-Books
+React Google Books
+====
+
+![badge](https://shields.io/badge/license-MIT-green)
 
 ## Table of Contents
 
@@ -6,25 +9,26 @@
 
 - [Deployed Link](#deployed-link)
 
-- [TechnonlogyUse](#Technonlogy-Use)
-
-- [License](#license)
+- [Technonlogies Used](#Technonlogy-Use)
 
 - [Contributing](#Contributing)
 
 ## Description
+This full-stack application utilizes Google Books API to return results of queried books for the user. The user is able to save the book to a database and view them on a different route. There they can delete the book from their list if they so choose.
 
-This Google Books Search App to allow Users to search and save books. When a user search a book in the search bar and the books are generated, including an image of the cover page, title author, a description of the book. If the user clicks the save button then the book will be saved to their profile. The user also can see a list of their saved books.
+The app relies on React to render all the components on the page and an Express and Mongo backend.
 
-## Video
 
-![Video]()
+## Demo
+
+![demo](https://i.imgur.com/C9F9xFk.gif)
 
 ## Deployed Link
 
-- [Deploy link] ()
+- [Deployed link](https://react-googlebooksapi-search.herokuapp.com/)
+- [GitHub Repo](https://spenrad.github.io/React-Google-Books)
 
-## Technonlogy Use
+## Technonlogies Used
 
 - React
 - Bootstrap
@@ -35,17 +39,15 @@ This Google Books Search App to allow Users to search and save books. When a use
 - Mongoose
 - JSX
 
-## Code Snippet
-
 ## Contributing
+William B
+- [GitHub](https://github.com/WeiLiBryan)
+- [LinkedIn](https://www.linkedin.com/in/william-bryan-72730019a/)
 
-## License
+Abuye M
+- [GitHub](https://github.com/AbuyeM1)
+- [LinkedIn](https://www.linkedin.com/in/abuye-mamuye-5a49921b0/)
 
-![badge](https://shields.io/badge/license-MIT-green)
-
-## Acknowledgments
-
-- Jerome Chenette (Instructor)
-- Manuel Nunes (TA)
-- Mahisha Manikandan (TA)
-- UC Berkeley Coding Bootcamp
+Spencer Christy
+- [GitHub](https://github.com/spenrad)
+- [LinkedIn](https://www.linkedin.com/in/spencer-christy/)
